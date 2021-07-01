@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+.search-container {
+  height: 100vh;
+  background-color: #a9e1ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container .container input {
+  box-sizing: border-box;
+  height: 5vh;
+  width: 40vw;
+  padding: 0 10px;
+  border-radius: 5px;
+  /* margin: 0; */
+  border: none;
+  transition: 0.4s ease;
+}
+
+.search-container .container input.collapse {
+  padding-right: 0;
+  padding-left: 0;
+  width: 0;
+}
+
+.search-container .container button {
+  margin: 0;
+  height: 5vh;
+  width: 35px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container .container button:active {
+  background-color: rgb(192, 215, 219);
+}
