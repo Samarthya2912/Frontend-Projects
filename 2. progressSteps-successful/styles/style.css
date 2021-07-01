@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --button-color: rgb(66, 66, 250);
+}
+
+body {
+  background-color: #f6f7fb;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: solid black 1px; */
+}
+
+.progress-container {
+  display: flex;
+  width: 50vh;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px 0;
+  max-width: 100%;
+  width: 350px;
+}
+
+.progress-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  opacity: 0.5;
+  height: 2px;
+  z-index: -1;
+  background-color: gray;
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  width: 0%; /*in quantums of 33%*/
+  height: 2px;
+  z-index: -1;
+  left: -2px;
+  background-color: var(--button-color);
+  transition: 0.4s ease;
+  left: 3px;
+}
+
+.circle {
+  border: 2px solid var(--button-color);
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.active {
+  background-color: var(--button-color);
+  color: white;
+}
+
+.btn {
+  background-color: var(--button-color);
+  color: white;
+  height: 25px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 25px;
+}
