@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+  font-family: "Noto Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  /* border: solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* border-radius: 10px; */
+  /* box-shadow: 2px 2px 2px 2px gray; */
+  position: absolute;
+  top: 50px;
+}
+
+.header {
+  margin-bottom: 5vh;
+  font-weight: 600;
+  color: gray;
+  font-size: x-large;
+}
+
+.qna {
+  margin: 10px;
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(168, 167, 167);
+  padding: 2vh 1.5vw;
+  border-radius: 5px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.qna .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qna .question button {
+  height: 3.5vh;
+  width: 3.5vh;
+  border-radius: 3.5vh;
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.question,
+.answer {
+  width: 40vw;
+}
+
+.answer {
+  height: 0;
+  overflow-y: hidden;
+  /* transition-delay: 1s; */
+  /* transition: 0.4s ease; */
+}
+
+.answer.show {
+  height: auto;
+  padding-top: 3vh;
+}
+
+.qna.expand {  
+  background-color: #fff;
+  box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(173, 172, 172);
+}
+
+.qna.expand::before, .qna.expand::after{
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 7rem;
+  position: absolute;
+  color: rgba(0, 0, 200, 0.1);
+  top: 1rem;
+  left: -1rem;
+}
+
+.qna.expand::after{
+  left: 2rem;
+  top: 0.5rem;
+  color: rgba(0, 0, 255, 0.15);
+  transform: rotateY(180deg);
+}
+
+.bi-chevron-down,
+.bi-x-circle-fill {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+@media screen and (max-width: 570px) {
+  .question,
+  .answer {
+    width: 80vw;
+    font-size: 15px;
+  }
+
+  .bi-chevron-down,
+  .bi-x-circle-fill {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+  }
+
+  .header{
+      font-size: large;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .question,
+  .answer {
+    font-size: 13px;
+  }
+
+  .bi-chevron-down,
+  .bi-x-circle-fill {
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+  }
+}
