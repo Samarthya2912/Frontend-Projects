@@ -21,14 +21,14 @@ body{
 }
 
 #playstation{
-    background-image: url(/media/PS5.jpg);
+    background-image: url(media/PS5.jpg);
     background-size: 75vw 120vh;
     /* background-size: contain; */
     background-repeat: no-repeat;
 }
 
 #xbox{
-    background-image: url(/media/xbox.jpg);
+    background-image: url(media/xbox.jpg);
     background-size: 75vw 100vh;
     background-repeat: no-repeat;
 }
